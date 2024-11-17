@@ -1,8 +1,6 @@
 /*
   8 - Readonly 2
   -------
-  by Anthony Fu (@antfu) #medium #readonly #object-keys
-
   ### Question
 
   Implement a generic `MyReadonly2<T, K>` which takes two type argument `T` and `K`.
@@ -28,8 +26,6 @@
   todo.description = "barFoo" // Error: cannot reassign a readonly property
   todo.completed = true // OK
   ```
-
-  > View on GitHub: https://tsch.js.org/8
 */
 
 /* _____________ Your Code Here _____________ */
@@ -70,10 +66,3 @@ interface Expected {
   readonly description?: string;
   completed: boolean;
 }
-
-/* _____________ Further Steps _____________ */
-/*
-  > Share your solutions: https://tsch.js.org/8/answer
-  > View solutions: https://tsch.js.org/8/solutions
-  > More Challenges: https://tsch.js.org
-*/
