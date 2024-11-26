@@ -11,12 +11,22 @@ importers:
       '@type-challenges/utils':
         specifier: ^0.1.1
         version: 0.1.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
 
 packages:
 
   '@type-challenges/utils@0.1.1':
     resolution: {integrity: sha512-A7ljYfBM+FLw+NDyuYvGBJiCEV9c0lPWEAdzfOAkb3JFqfLl0Iv/WhWMMARHiRKlmmiD1g8gz/507yVvHdQUYA==}
 
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
 snapshots:
 
   '@type-challenges/utils@0.1.1': {}
+
+  typescript@5.7.2: {}
