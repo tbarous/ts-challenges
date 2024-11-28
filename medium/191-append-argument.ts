@@ -17,13 +17,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-type AppendArgument<Fn, A> = any;
+type AppendArgument<Fn extends (...args: any[]) => any, A> = Fn extends (
+  ...args: infer Args
+) => infer R
+  ? (...args: [...Args, A]) => R
+  : never;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
 
 type Case1 = AppendArgument<(a: number, b: string) => number, boolean>;
 type Result1 = (a: number, b: string, x: boolean) => number;
+
+// type Test = Result1 extends (...args: infer B) => number ? 1 : 2;
 
 type Case2 = AppendArgument<() => void, undefined>;
 type Result2 = (x: undefined) => void;
